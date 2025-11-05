@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comunicado às Famílias – Inovateen 2025 | Colégio Nacional</title>
+  <meta name="description" content="Comunicado oficial às famílias sobre a Inovateen 2025 integrada ao InovaDay." />
+  <style>
+    :root{
+      --na-red:#D32F2F;      /* vermelho Naça */
+      --na-black:#111111;    /* preto Naça */
+      --na-white:#ffffff;    /* branco */
+      --na-gray:#f5f5f7;     /* apoio */
+      --na-text:#1b1b1b;
+      --radius:18px;
+      --shadow:0 10px 24px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif; color:var(--na-text); background:linear-gradient(180deg, #fff 0%, #fff 60%, var(--na-gray) 100%);}    
+    a{color:var(--na-red); text-decoration-thickness: 2px;}
+    .wrap{max-width:1080px; margin-inline:auto; padding:24px;}
+
+    /* Topbar / Nav */
+    .topbar{position:sticky; top:0; z-index:20; backdrop-filter: blur(8px); background:rgba(255,255,255,.85); border-bottom:1px solid #ececee;}
+    .nav{display:flex; gap:18px; align-items:center; justify-content:space-between; max-width:1080px; margin:auto; padding:10px 24px;}
+    .nav .brand-mini{display:flex; gap:10px; align-items:center; font-weight:800}
+    .nav a{font-weight:700; text-decoration:none; color:var(--na-black);}
+    .nav .links{display:flex; gap:16px; flex-wrap:wrap;}
+
+    /* Header */
+    header{background: linear-gradient(135deg, var(--na-black), #2a2a2a); color:var(--na-white); position:relative; overflow:hidden;}
+    header .wrap{padding-top:48px; padding-bottom:26px;}
+    .brand{display:flex; align-items:center; gap:14px;}
+    .brand__logo{width:44px; height:44px; display:grid; place-items:center; border-radius:12px; background:var(--na-red); box-shadow:0 6px 18px rgba(211,47,47,.35);}
+    .brand__text{font-weight:800; letter-spacing:.4px;}
+    .title{margin-top:18px; font-size:clamp(1.6rem, 1.1rem + 2vw, 2.6rem); font-weight:900; line-height:1.1}
+    .subtitle{margin-top:10px; font-size:clamp(1rem, .95rem + .6vw, 1.25rem); opacity:.9}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .badge{display:inline-flex; align-items:center; gap:8px; font-weight:800; font-size:.85rem; letter-spacing:.3px; background:var(--na-red); color:var(--na-white); padding:6px 10px; border-radius:999px;}
+
+    /* Highlights */
+    .callout{display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top:22px;}
+    .callout .card{background:var(--na-white); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; border:1px solid #ececee; color:#000;}
+    .tag{display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:.85rem; letter-spacing:.3px; background:var(--na-red); color:var(--na-white); padding:6px 10px; border-radius:999px;}
+
+    /* Sections */
+    section{margin-top:28px;}
+    h2{font-size:clamp(1.2rem, 1rem + .8vw, 1.6rem); margin:0 0 12px;}
+    .section{background:var(--na-white); border:1px solid #ececee; border-radius:var(--radius); box-shadow:var(--shadow); padding:24px;}
+    p{line-height:1.65; font-size:1.05rem;}
+
+    /* Info grid */
+    .grid{display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
+    .info{display:flex; gap:10px; align-items:flex-start; background:#fff; border:1px solid #ececee; border-radius:12px; padding:14px 16px}
+    .info svg{flex:0 0 20px}
+
+    /* Lists / Rules */
+    .rules{display:grid; gap:18px;}
+    .rule{border:1px solid #ececee; border-radius:14px; padding:18px; background: #fff;}
+    .rule h3{margin:0 0 8px; font-size:1.05rem; color:var(--na-red)}
+    ul,ol{margin:8px 0 0 18px}
+    li{margin:6px 0;}
+
+    /* Table */
+    table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #eee;border-radius:14px;overflow:hidden}
+    th,td{padding:12px 14px;text-align:left;vertical-align:top}
+    thead th{background:#fafafa;color:#333;font-weight:700}
+    tbody tr:not(:last-child) td{border-bottom:1px solid #f0f0f0}
+
+    /* CTA */
+    .cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:8px;}
+    .btn{appearance:none; border:none; cursor:pointer; font-weight:800; letter-spacing:.3px; padding:14px 16px; border-radius:12px; box-shadow:var(--shadow); transition:transform .08s ease, box-shadow .2s ease;}
+    .btn--primary{background:var(--na-red); color:#fff;}
+    .btn--primary:hover{transform:translateY(-1px); box-shadow:0 14px 30px rgba(211,47,47,.35)}
+    .btn--outline{background:#fff; color:var(--na-black); border:1.5px solid var(--na-black)}
+
+    /* Footer */
+    footer{margin-top:36px; background: #121212; color:#fff}
+    footer .wrap{display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between; padding-block:22px}
+    .madeby{opacity:.9; font-size:.9rem}
+
+    /* Float tag */
+    .float-tag{position:fixed; right:18px; bottom:18px; background:var(--na-black); color:#fff; padding:10px 14px; border-radius:999px; font-size:.9rem; box-shadow:var(--shadow); opacity:.9;}
+
+    /* Print */
+    @media print{
+      header, footer{color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact}
+      a[href]:after{content:" (" attr(href) ")";}
+      .btn,.float-tag,.topbar{display:none}
+      body{background:#fff}
+      .section{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <nav class="nav" aria-label="Navegação">
+      <div class="brand-mini"><span>Colégio Nacional</span></div>
+      <div class="links">
+        <a href="#apresentacao">Apresentação</a>
+        <a href="#inscricoes">Inscrições</a>
+        <a href="#infra">Infraestrutura</a>
+        <a href="#estrutura">Estrutura</a>
+        <a href="#praca">Praça de Alimentação</a>
+        <a href="#regras">Regras</a>
+        <a href="#fechamento">Contato</a>
+      </div>
+    </nav>
+  </div>
+
+  <header>
+    <div class="wrap">
+      <div class="brand" aria-label="Colégio Nacional">
+        <div class="brand__logo" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 18V6h2l8 9.5V6h2v12h-2L6 8.5V18H4z" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="brand__text">COLÉGIO NACIONAL</div>
+      </div>
+      <h1 class="title">Comunicado às Famílias: Inovateen 2025</h1>
+      <p class="subtitle">Inovateen integrada ao <strong>InovaDay</strong> em <strong>26 de novembro</strong> (quarta-feira), no <strong>Castelli Master</strong>.</p>
+      <div class="badges">
+        <span class="badge">Ensino Fundamental: 6º ao 9º ano</span>
+        <span class="badge">Protagonismo • Criatividade • Inovação</span>
+      </div>
+
+      <!-- HIGHLIGHTS inline (only here, black text) -->
+      <div class="callout" style="margin-top:18px;">
+        <div class="card">
+          <span class="tag" aria-label="Data do evento">Data</span>
+          <p><strong>26 de novembro</strong> (quarta-feira)</p>
+        </div>
+        <div class="card">
+          <span class="tag" aria-label="Local do evento">Local</span>
+          <p><strong>Castelli Master</strong><br><small>Av. Lidormira Borges do Nascimento, 6000</small></p>
+        </div>
+        <div class="card">
+          <span class="tag" aria-label="Programação">Programação</span>
+          <p>Manhã: Batalha de Pitch – Ensino Médio (8h às 13h)</p>
+          <p>Tarde: Inovateen – Ensino Fundamental</p>
+        </div>
+        <div class="card">
+          <span class="tag" aria-label="Horários">Horários</span>
+          <p>Preparação dos estandes: 14h às 16h</p>
+          <p><strong>Apresentação dos Projetos – Evento Inovateen: 16h às 20h</strong></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" aria-label="Conteúdo principal">
+    <section class="section" id="apresentacao">
+      <h2>Prezadas famílias</h2>
+      <p>É com grande alegria que informamos que, neste ano, a nossa Inovateen 2025 acontecerá integrada ao evento <strong>InovaDay</strong>, o qual acontece no dia <strong>26 de novembro</strong> (quarta-feira), no <strong>Castelli Master</strong>. Durante o evento, ocorrerá pela manhã a <strong>Batalha de Pitch</strong>, destinada aos alunos do Ensino Médio, e, no período da tarde, a <strong>Inovateen</strong>. O horário de preparação e decoração dos estandes será das <strong>14h às 16h</strong>, e a Inovateen acontecerá das <strong>16h às 20h</strong>. Será um dia inteiro dedicado à criatividade, à inovação e ao protagonismo juvenil, com diversas atividades que estimulam o pensamento crítico, o espírito empreendedor e o olhar transformador dos estudantes diante dos desafios do mundo atual.</p>
+      <p>A Inovateen é um dos momentos mais aguardados do ano letivo e representa a culminância da disciplina <strong>Inovanaça</strong>, em que os alunos vivenciam na prática o processo de criação de projetos inovadores voltados à resolução de problemas reais da sociedade.</p>
+      <p>É também um momento de celebração e compartilhamento, em que os estudantes têm a oportunidade de expor e apresentar seus projetos para as famílias e para toda a comunidade escolar. É uma ocasião especial para que todos possam conhecer de perto o trabalho desenvolvido ao longo do ano, reconhecer o empenho dos alunos e valorizar a aprendizagem que nasce da prática, da pesquisa e da colaboração.</p>
+      <p>Durante o evento, os estudantes do Ensino Fundamental apresentarão os projetos que desenvolveram ao longo do ano, expondo protótipos, maquetes, vídeos, produtos e serviços idealizados e produzidos por eles. Mais do que uma feira, a Inovateen é um espaço de aprendizagem viva, em que os estudantes exercitam o pensamento crítico, a comunicação, o trabalho em equipe e a empatia. Ao longo do processo, aprendem a argumentar, defender ideias, lidar com opiniões diferentes e administrar conflitos, compreendendo o valor do diálogo e da colaboração na construção coletiva de conhecimento.</p>
+    </section>
+
+    <section class="section" id="inscricoes">
+      <h2>Inscrições e organização</h2>
+      <p>Para a edição deste ano ter o sucesso que esperamos, contamos com a ajuda e participação das famílias nesse processo. Estamos enviando, juntamente com este comunicado, o link da <strong>Ficha de Inscrição</strong> do grupo na Inovateen 2025. Cada grupo deverá realizar apenas uma inscrição, preferencialmente feita pelo líder do grupo.</p>
+      <div class="cta">
+        <a class="btn btn--primary" id="btn-inscricao" href="https://docs.google.com/forms/d/e/1FAIpQLSebHGOL5QYPH1Rxl8hoFAvJrs4ASOm0tII5Oky3_4akrD2yTg/viewform?usp=sharing&ouid=102027872882431350432" target="_blank" rel="noopener">Acessar Ficha de Inscrição</a>
+      </div>
+    </section>
+
+    <section class="section" id="infra">
+      <h2>Infraestrutura fornecida pela escola</h2>
+      <div class="grid">
+        <div class="info">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 6h18v12H3z"/><path d="M5 8h14v8H5z" fill="#fff"/></svg>
+          <p><strong>1 mesa</strong> por grupo</p>
+        </div>
+        <div class="info">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M7 4h10v16H7z"/></svg>
+          <p><strong>4 cadeiras</strong> por grupo</p>
+        </div>
+        <div class="info">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          <p><strong>Forros de mesa</strong> padronizados do evento</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA OFERECIDA -->
+    <section class="section" id="estrutura">
+      <h2>Estrutura oferecida pela escola</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px;">
+        <div class="section" style="padding:16px;">
+          <h3 style="margin-top:0;">Kit padrão por equipe</h3>
+          <ul>
+            <li>1 mesa</li>
+            <li>4 cadeiras</li>
+            <li>Forros de mesa</li>
+          </ul>
+        </div>
+        <div class="section" style="padding:16px;">
+          <h3 style="margin-top:0;">Linha do tempo</h3>
+          <ul>
+            <li><strong>Até 11/11</strong>: adesão aos materiais complementares via formulário</li>
+            <li>Semana do evento: revisão final dos materiais e ensaios de fala</li>
+            <li><strong>26/11</strong>: montagem, apresentações e feira aberta às famílias e convidados</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:16px; padding:16px;">
+        <h3 style="margin-top:0;">Materiais complementares</h3>
+        <p class="small">Disponíveis mediante solicitação no formulário. <strong>Valores</strong> e prazos definidos no documento.</p>
+        <table aria-label="Materiais complementares disponíveis">
+          <thead>
+            <tr>
+              <th>Material</th><th>Descrição</th><th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Mesa ou cadeira extra</strong></td><td>Apoio adicional para o estande</td><td>Conforme disponibilidade</td></tr>
+            <tr><td><strong>Balcão de apoio</strong></td><td>Exposição de protótipos, amostras ou produtos</td><td>Altura padrão de evento</td></tr>
+            <tr><td><strong>Tapete</strong></td><td>Revestimento opcional para o piso do estande</td><td>Cor padrão do evento</td></tr>
+            <tr><td><strong>Painel de PVC adesivado</strong></td><td>Estrutura leve para exibição visual do projeto</td><td>Arte e personalização pelo grupo</td></tr>
+            <tr><td><strong>Cavalete ou tripé extra</strong></td><td>Suporte adicional para painel ou banner</td><td>Complementa o item padrão</td></tr>
+            <tr><td><strong>Banner de lona</strong></td><td>Impressão em lona fosca</td><td>Arquivo/arte enviado pela equipe</td></tr>
+          </tbody>
+        </table>
+        <div class="cta" role="region" aria-label="Acesso ao formulário de materiais">
+          <div><strong>Formulário de adesão para materiais complementares</strong><br><span class="small"><strong>Valores</strong> e prazos no formulário. Preenchimento até <strong>11/11</strong>.</span></div>
+          <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSebHGOL5QYPH1Rxl8hoFAvJrs4ASOm0tII5Oky3_4akrD2yTg/viewform?usp=sharing&ouid=102027872882431350432" target="_blank" rel="noopener">Acessar formulário</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOD COURT SECTION -->
+    <section class="section" id="praca">
+      <h2>Praça de Alimentação</h2>
+      <p style='color:#D32F2F; font-weight:700;'>Destaque: A escola servirá um lanche para todos os estudantes das 15h às 15h30.</p>
+      <p>Durante todo o <strong>Evento</strong>, funcionará uma <strong>praça de alimentação</strong> com opções para diferentes gostos, oferecendo conforto às famílias e aos estudantes e favorecendo o convívio da comunidade escolar.</p>
+      <ul>
+        <li><strong>Funcionamento:</strong> das <strong>16h às 20h</strong>.</li>
+        <li><strong>Opções:</strong> lanches, sucos, cafés e sobremesas.</li>
+        <li><strong>Pagamentos:</strong> cartão, PIX e dinheiro.</li>
+        <li><strong>Sustentabilidade:</strong> incentive o uso de <em>squeeze/garrafinha</em> e evite descartáveis. Haverá lixeiras para a coleta seletiva.</li>
+        <li><strong>Localização:</strong> área sinalizada próxima ao fluxo principal do evento para fácil acesso das famílias.</li>
+      </ul>
+      <p>Contamos com a colaboração de todos para manter o espaço limpo e acolhedor, reforçando os valores de cuidado e responsabilidade compartilhados pelo Colégio Nacional.</p>
+    </section>
+
+    <section class="section" id="regras">
+      <h2>Regras Gerais – Feira de Empreendedorismo “Inovateen”</h2>
+
+      <div class="rules">
+        <div class="rule">
+          <h3>1. Montagem dos estandes</h3>
+          <p>Cada grupo será responsável pela organização e montagem de seu estande, devendo planejar previamente os itens necessários para compor o espaço.</p>
+          <p><strong>Podem ser levados:</strong></p>
+          <ul>
+            <li>Computadores, notebooks ou tablets para apresentação do projeto;</li>
+            <li>Extensões e réguas de energia (com segurança e organização dos fios);</li>
+            <li>Cartazes, banners e painéis informativos;</li>
+            <li>Produtos criados pelo grupo;</li>
+            <li>Itens de decoração que valorizem o projeto (plantas, tecidos, caixas, paletes, recicláveis decorados, etc.);</li>
+            <li>Materiais recicláveis ou reutilizáveis que demonstrem criatividade e compromisso com o meio ambiente;</li>
+            <li>Materiais de papelaria que auxiliem na montagem dos estandes.</li>
+          </ul>
+        </div>
+
+        <div class="rule">
+          <h3>2. É melhor não levar</h3>
+          <p><strong>Não será permitido</strong> levar ou utilizar no estande:</p>
+          <ul>
+            <li>Materiais que gerem grande quantidade de lixo não reciclável (plásticos descartáveis, copos e talheres de uso único, glitter comum, isopor, EVA, etc.);</li>
+            <li>Itens que coloquem em risco a segurança dos participantes (velas acesas, objetos cortantes, líquidos inflamáveis, etc.);</li>
+            <li>Produtos não condizentes com os princípios de sustentabilidade e ética; exemplo: ao invés de usar balões plásticos, prefira enfeites em papel, tecidos, plantas naturais ou reutilização de materiais;</li>
+            <li>Som alto, microfones sem autorização ou qualquer aparelho que atrapalhe outros grupos.</li>
+          </ul>
+        </div>
+
+        <div class="rule">
+          <h3>3. Pontualidade</h3>
+          <ul>
+            <li>Todos os grupos deverão estar no local do evento às <strong>14h</strong> para realizar a montagem dos estandes;</li>
+            <li>O horário de início e encerramento da feira deve ser rigorosamente respeitado;</li>
+            <li>A desmontagem dos estandes só poderá ocorrer após o término oficial do evento.</li>
+          </ul>
+        </div>
+
+        <div class="rule">
+          <h3>4. Comportamento e organização</h3>
+          <p>Durante o evento, os estudantes devem manter:</p>
+          <ul>
+            <li>Postura ética, responsável e respeitosa com colegas, visitantes e avaliadores;</li>
+            <li>O espaço limpo e organizado durante toda a exposição;</li>
+            <li>Cuidados com os equipamentos e materiais utilizados;</li>
+            <li>Foco no projeto apresentado, evitando brincadeiras, uso de celular ou atitudes que possam desviar a atenção dos visitantes.</li>
+          </ul>
+          <p><em>Lembre-se: cada estande representa o esforço e a imagem do grupo. O bom comportamento é parte da avaliação!</em></p>
+        </div>
+
+        <div class="rule">
+          <h3>5. Avaliação</h3>
+          <ul>
+            <li>Criatividade e inovação;</li>
+            <li>Clareza na apresentação;</li>
+            <li>Aplicação de princípios sustentáveis;</li>
+            <li>Organização e estética do estande;</li>
+            <li>Comportamento e pontualidade.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fechamento">
+      <h2>Encerramento</h2>
+      <p>Contamos com o apoio e a parceria das famílias para que essa edição da Inovateen seja mais uma vez um sucesso, celebrando o talento, a criatividade e o protagonismo dos nossos alunos.</p>
+      <p><strong>Atenciosamente,</strong><br/>Professores de Inovanaça, Coordenação e Direção<br/>Colégio Nacional</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>Inovateen 2025 • Colégio Nacional</div>
+      <div class="madeby">Colégio Nacional</div>
+    </div>
+  </footer>
+
+  <span class="float-tag">Colégio Nacional</span>
+</body>
+</html>
